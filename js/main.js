@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalSlides = slides.length;
 
     // --- NEW: Variables for automatic sliding ---
-    const slideInterval = 3000; // Time in milliseconds (2 seconds)
+    const slideInterval = 3000; // Time in milliseconds (3 seconds)
     let autoSlideTimer; // Variable to hold the setInterval timer
 
     // Create dots
@@ -81,6 +81,38 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- Final steps ---
     goToSlide(0); // Initialize slider to the first slide
     startAutoSlide(); // Start the automatic sliding when the page loads
+});
+
+
+
+/* Section de Vuelos */
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all the tab buttons and all the form panels
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const searchForms = document.querySelectorAll('.search-form');
+
+    // Add a click event listener to each tab button
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Get the value from the 'data-tab' attribute of the clicked button
+            const tabTarget = button.getAttribute('data-tab'); // e.g., "flights", "hotels", or "cars"
+
+            // 1. Remove the 'active' class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            // 2. Add the 'active' class to the button that was just clicked
+            button.classList.add('active');
+
+            // 3. Remove the 'active' class from all forms to hide them
+            searchForms.forEach(form => form.classList.remove('active'));
+
+            // 4. Find the correct form using its ID and add the 'active' class to show it
+            const targetForm = document.getElementById(tabTarget + '-form'); // e.g., document.getElementById('flights-form')
+            if (targetForm) {
+                targetForm.classList.add('active');
+            }
+        });
+    });
 });
 
 // ==================================================
