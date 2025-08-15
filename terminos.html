@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Términos y Condiciones - TripAvisor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        :root {
-            --primary: #2563eb; --primary-dark: #1d4ed8; --secondary: #f1f5f9; --accent: #0ea5e9;
-            --text: #1e293b; --text-light: #64748b; --white: #ffffff; --gray-100: #f8fafc;
-            --gray-200: #e2e8f0; --gray-300: #cbd5e1; --success: #10b981; --warning: #f59e0b; --error: #ef4444;
-        }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text); background: var(--gray-100); }
-        header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); position: sticky; top: 0; width: 100%; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-size: 28px; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--primary); }
-        .main-content { max-width: 1000px; margin: 50px auto; padding: 40px; background: var(--white); border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-        .main-content h1 { font-size: 2.5rem; margin-bottom: 20px; color: var(--primary); }
-        .main-content p { margin-bottom: 15px; line-height: 1.8; }
-        footer { background: var(--text); color: var(--white); padding: 50px 0; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
     <header>
         <nav class="nav-container">
-            <a href="Tripadvisor.html" class="logo"><i class="fas fa-compass"></i> TripAvisor</a>
+            <a href="#" class="logo"><i class="fas fa-compass"></i> TripAvisor</a>
             <ul class="nav-links">
-                <li><a href="Tripadvisor.html#inicio">Inicio</a></li>
-                <li><a href="Tripadvisor.html#services">Servicios</a></li>
-                <li><a href="Tripadvisor.html#destinations">Destinos</a></li>
-                <li><a href="Tripadvisor.html#contacto-section">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#services">Servicios</a></li>
+                <li><a href="index.html#destinations">Destinos</a></li>
+                <li><a href="index.html#contacto-section">Contacto</a></li>
             </ul>
-            <div class="cart-icon" onclick="window.location.href='carrito.html'">
-                <i class="fas fa-shopping-cart"></i>
+            <div class="header-right-panel" style="display: flex; align-items: center; gap: 20px;">
+                <select id="language-switcher" class="language-switcher"
+                    style="border: 1px solid var(--gray-300); border-radius: 8px; padding: 5px; font-family: inherit;">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <div id="auth-links" class="auth-links" style="display: flex; align-items: center; gap: 10px;">
+                    <a href="carrito.html" class="login-btn"
+                        style="text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s; color: var(--primary);">Iniciar
+                        Sesión</a>
+                    <a href="carrito.html" class="register-btn"
+                        style="text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s; background-color: var(--primary); color: var(--white);">Registrarse</a>
+                </div>
+                <div id="user-info" style="display: none; align-items: center; gap: 10px;">
+                    <span id="user-greeting" style="font-weight: 500;"></span>
+                    <a href="#" id="logout-btn"
+                        style="color: var(--error); text-decoration: none; font-weight: 500;">Salir</a>
+                </div>
+
+                <div class="mobile-menu"><span></span><span></span><span></span></div>
             </div>
         </nav>
     </header>
@@ -46,29 +51,57 @@
         <h1>Términos y Condiciones</h1>
         <p><strong>Última actualización:</strong> 13 de agosto de 2025</p>
 
-        <p>Bienvenido a TripAvisor. Estos términos y condiciones describen las reglas y regulaciones para el uso del sitio web de TripAvisor, ubicado en [URL del sitio web]. Al acceder a este sitio web, asumimos que aceptas estos términos y condiciones. No continúes usando TripAvisor si no estás de acuerdo con todos los términos y condiciones establecidos en esta página.</p>
+        <p>Bienvenido a TripAvisor. Estos términos y condiciones describen las reglas y regulaciones para el uso del
+            sitio web de TripAvisor, ubicado en [URL del sitio web]. Al acceder a este sitio web, asumimos que aceptas
+            estos términos y condiciones. No continúes usando TripAvisor si no estás de acuerdo con todos los términos y
+            condiciones establecidos en esta página.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">1. Cuentas de Usuario</h2>
-        <p>Cuando creas una cuenta con nosotros, debes proporcionarnos información precisa, completa y actualizada en todo momento. El no hacerlo constituye un incumplimiento de los Términos, lo que puede resultar en la terminación inmediata de tu cuenta en nuestro Servicio.</p>
-        <p>Eres responsable de salvaguardar la contraseña que utilizas para acceder al Servicio y de cualquier actividad o acción bajo tu contraseña, ya sea que tu contraseña esté con nuestro Servicio o con un servicio de terceros.</p>
+        <p>Cuando creas una cuenta con nosotros, debes proporcionarnos información precisa, completa y actualizada en
+            todo momento. El no hacerlo constituye un incumplimiento de los Términos, lo que puede resultar en la
+            terminación inmediata de tu cuenta en nuestro Servicio.</p>
+        <p>Eres responsable de salvaguardar la contraseña que utilizas para acceder al Servicio y de cualquier actividad
+            o acción bajo tu contraseña, ya sea que tu contraseña esté con nuestro Servicio o con un servicio de
+            terceros.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">2. Propiedad Intelectual</h2>
-        <p>El Servicio y su contenido original, características y funcionalidad son y seguirán siendo propiedad exclusiva de TripAvisor y sus licenciantes. El Servicio está protegido por derechos de autor, marcas registradas y otras leyes tanto de [País] como de países extranjeros. Nuestras marcas comerciales no pueden ser utilizadas en conexión con ningún producto o servicio sin el consentimiento previo por escrito de TripAvisor.</p>
+        <p>El Servicio y su contenido original, características y funcionalidad son y seguirán siendo propiedad
+            exclusiva de TripAvisor y sus licenciantes. El Servicio está protegido por derechos de autor, marcas
+            registradas y otras leyes tanto de [País] como de países extranjeros. Nuestras marcas comerciales no pueden
+            ser utilizadas en conexión con ningún producto o servicio sin el consentimiento previo por escrito de
+            TripAvisor.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">3. Enlaces a Otros Sitios Web</h2>
-        <p>Nuestro Servicio puede contener enlaces a sitios web o servicios de terceros que no son propiedad ni están controlados por TripAvisor. TripAvisor no tiene control sobre, y no asume ninguna responsabilidad por, el contenido, las políticas de privacidad o las prácticas de los sitios web o servicios de terceros. Además, reconoces y aceptas que TripAvisor no será responsable, directa o indirectamente, por ningún daño o pérdida causada o presuntamente causada por o en conexión con el uso o la confianza en dicho contenido, bienes o servicios disponibles en o a través de dichos sitios web o servicios.</p>
+        <p>Nuestro Servicio puede contener enlaces a sitios web o servicios de terceros que no son propiedad ni están
+            controlados por TripAvisor. TripAvisor no tiene control sobre, y no asume ninguna responsabilidad por, el
+            contenido, las políticas de privacidad o las prácticas de los sitios web o servicios de terceros. Además,
+            reconoces y aceptas que TripAvisor no será responsable, directa o indirectamente, por ningún daño o pérdida
+            causada o presuntamente causada por o en conexión con el uso o la confianza en dicho contenido, bienes o
+            servicios disponibles en o a través de dichos sitios web o servicios.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">4. Limitación de Responsabilidad</h2>
-        <p>En ningún caso TripAvisor, ni sus directores, empleados, socios, agentes, proveedores o afiliados, serán responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo, sin limitación, pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de (i) tu acceso o uso o incapacidad para acceder o usar el Servicio; (ii) cualquier conducta o contenido de cualquier tercero en el Servicio; (iii) cualquier contenido obtenido del Servicio; y (iv) el acceso no autorizado, uso o alteración de tus transmisiones o contenido, ya sea basado en garantía, contrato, agravio (incluida la negligencia) o cualquier otra teoría legal, ya sea que hayamos sido informados o no de la posibilidad de dicho daño.</p>
+        <p>En ningún caso TripAvisor, ni sus directores, empleados, socios, agentes, proveedores o afiliados, serán
+            responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo, sin
+            limitación, pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de
+            (i) tu acceso o uso o incapacidad para acceder o usar el Servicio; (ii) cualquier conducta o contenido de
+            cualquier tercero en el Servicio; (iii) cualquier contenido obtenido del Servicio; y (iv) el acceso no
+            autorizado, uso o alteración de tus transmisiones o contenido, ya sea basado en garantía, contrato, agravio
+            (incluida la negligencia) o cualquier otra teoría legal, ya sea que hayamos sido informados o no de la
+            posibilidad de dicho daño.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">5. Cambios</h2>
-        <p>Nos reservamos el derecho, a nuestra sola discreción, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es material, intentaremos proporcionar un aviso de al menos 30 días antes de que los nuevos términos entren en vigencia. Lo que constituye un cambio material se determinará a nuestra sola discreción.</p>
+        <p>Nos reservamos el derecho, a nuestra sola discreción, de modificar o reemplazar estos Términos en cualquier
+            momento. Si una revisión es material, intentaremos proporcionar un aviso de al menos 30 días antes de que
+            los nuevos términos entren en vigencia. Lo que constituye un cambio material se determinará a nuestra sola
+            discreción.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">6. Contáctenos</h2>
-        <p>Si tienes alguna pregunta sobre estos Términos, por favor contáctanos a través del formulario en nuestra sección de <a href="ayuda.html" style="color: var(--primary);">Ayuda</a>.</p>
+        <p>Si tienes alguna pregunta sobre estos Términos, por favor contáctanos a través del formulario en nuestra
+            sección de <a href="ayuda.html" style="color: var(--primary);">Ayuda</a>.</p>
     </main>
     <footer style="background: var(--text); color: var(--white); padding: 50px 0; text-align: center;">
         <p style="opacity: 0.6; font-size: 14px;">© 2025 TripAvisor. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>

@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Política de Privacidad - TripAvisor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        :root {
-            --primary: #2563eb; --primary-dark: #1d4ed8; --secondary: #f1f5f9; --accent: #0ea5e9;
-            --text: #1e293b; --text-light: #64748b; --white: #ffffff; --gray-100: #f8fafc;
-            --gray-200: #e2e8f0; --gray-300: #cbd5e1; --success: #10b981; --warning: #f59e0b; --error: #ef4444;
-        }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text); background: var(--gray-100); }
-        header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); position: sticky; top: 0; width: 100%; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-size: 28px; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--primary); }
-        .main-content { max-width: 1000px; margin: 50px auto; padding: 40px; background: var(--white); border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-        .main-content h1 { font-size: 2.5rem; margin-bottom: 20px; color: var(--primary); }
-        .main-content p { margin-bottom: 15px; line-height: 1.8; }
-        footer { background: var(--text); color: var(--white); padding: 50px 0; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
     <header>
         <nav class="nav-container">
-            <a href="Tripadvisor.html" class="logo"><i class="fas fa-compass"></i> TripAvisor</a>
+            <a href="#" class="logo"><i class="fas fa-compass"></i> TripAvisor</a>
             <ul class="nav-links">
-                <li><a href="Tripadvisor.html#inicio">Inicio</a></li>
-                <li><a href="Tripadvisor.html#services">Servicios</a></li>
-                <li><a href="Tripadvisor.html#destinations">Destinos</a></li>
-                <li><a href="Tripadvisor.html#contacto-section">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#services">Servicios</a></li>
+                <li><a href="index.html#destinations">Destinos</a></li>
+                <li><a href="index.html#contacto-section">Contacto</a></li>
             </ul>
-            <div class="cart-icon" onclick="window.location.href='carrito.html'">
-                <i class="fas fa-shopping-cart"></i>
+            <div class="header-right-panel" style="display: flex; align-items: center; gap: 20px;">
+                <select id="language-switcher" class="language-switcher"
+                    style="border: 1px solid var(--gray-300); border-radius: 8px; padding: 5px; font-family: inherit;">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <div id="auth-links" class="auth-links" style="display: flex; align-items: center; gap: 10px;">
+                    <a href="carrito.html" class="login-btn"
+                        style="text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s; color: var(--primary);">Iniciar
+                        Sesión</a>
+                    <a href="carrito.html" class="register-btn"
+                        style="text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s; background-color: var(--primary); color: var(--white);">Registrarse</a>
+                </div>
+                <div id="user-info" style="display: none; align-items: center; gap: 10px;">
+                    <span id="user-greeting" style="font-weight: 500;"></span>
+                    <a href="#" id="logout-btn"
+                        style="color: var(--error); text-decoration: none; font-weight: 500;">Salir</a>
+                </div>
+
+                <div class="mobile-menu"><span></span><span></span><span></span></div>
             </div>
         </nav>
     </header>
@@ -46,16 +51,26 @@
         <h1>Política de Privacidad</h1>
         <p><strong>Última actualización:</strong> 13 de agosto de 2025</p>
 
-        <p>En TripAvisor ("nosotros", "nuestro"), respetamos su privacidad y nos comprometemos a proteger sus datos personales. Esta política de privacidad le informará sobre cómo cuidamos sus datos personales cuando visita nuestro sitio web (independientemente de dónde lo visite) y le informará sobre sus derechos de privacidad y cómo la ley lo protege.</p>
+        <p>En TripAvisor ("nosotros", "nuestro"), respetamos su privacidad y nos comprometemos a proteger sus datos
+            personales. Esta política de privacidad le informará sobre cómo cuidamos sus datos personales cuando visita
+            nuestro sitio web (independientemente de dónde lo visite) y le informará sobre sus derechos de privacidad y
+            cómo la ley lo protege.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">1. Información que recopilamos</h2>
-        <p>Recopilamos diferentes tipos de información para diversos fines para proporcionar y mejorar nuestro Servicio para usted.</p>
+        <p>Recopilamos diferentes tipos de información para diversos fines para proporcionar y mejorar nuestro Servicio
+            para usted.</p>
         <ul>
-            <li><strong>Datos de Identidad Personal:</strong> Nombre, apellido, nombre de usuario o identificador similar.</li>
+            <li><strong>Datos de Identidad Personal:</strong> Nombre, apellido, nombre de usuario o identificador
+                similar.</li>
             <li><strong>Datos de Contacto:</strong> Dirección de correo electrónico y números de teléfono.</li>
-            <li><strong>Datos Técnicos:</strong> Dirección del protocolo de Internet (IP), sus datos de inicio de sesión, tipo y versión del navegador, configuración y ubicación de la zona horaria, tipos y versiones de complementos del navegador, sistema operativo y plataforma y otra tecnología en los dispositivos que utiliza para acceder a este sitio web.</li>
-            <li><strong>Datos de Uso:</strong> Información sobre cómo utiliza nuestro sitio web, productos y servicios.</li>
-            <li><strong>Datos de Marketing y Comunicaciones:</strong> Sus preferencias para recibir marketing de nosotros y de nuestros terceros y sus preferencias de comunicación.</li>
+            <li><strong>Datos Técnicos:</strong> Dirección del protocolo de Internet (IP), sus datos de inicio de
+                sesión, tipo y versión del navegador, configuración y ubicación de la zona horaria, tipos y versiones de
+                complementos del navegador, sistema operativo y plataforma y otra tecnología en los dispositivos que
+                utiliza para acceder a este sitio web.</li>
+            <li><strong>Datos de Uso:</strong> Información sobre cómo utiliza nuestro sitio web, productos y servicios.
+            </li>
+            <li><strong>Datos de Marketing y Comunicaciones:</strong> Sus preferencias para recibir marketing de
+                nosotros y de nuestros terceros y sus preferencias de comunicación.</li>
         </ul>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">2. Cómo utilizamos su información</h2>
@@ -71,12 +86,18 @@
         </ul>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">3. Seguridad de los Datos</h2>
-        <p>La seguridad de sus datos es importante para nosotros, pero recuerde que ningún método de transmisión por Internet o método de almacenamiento electrónico es 100% seguro. Si bien nos esforzamos por utilizar medios comercialmente aceptables para proteger sus Datos personales, no podemos garantizar su seguridad absoluta.</p>
+        <p>La seguridad de sus datos es importante para nosotros, pero recuerde que ningún método de transmisión por
+            Internet o método de almacenamiento electrónico es 100% seguro. Si bien nos esforzamos por utilizar medios
+            comercialmente aceptables para proteger sus Datos personales, no podemos garantizar su seguridad absoluta.
+        </p>
 
-        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">4. Sus Derechos de Protección de Datos</h2>
-        <p>Usted tiene ciertos derechos de protección de datos. TripAvisor tiene como objetivo tomar medidas razonables para permitirle corregir, enmendar, eliminar o limitar el uso de sus Datos Personales.</p>
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">4. Sus Derechos de Protección de Datos
+        </h2>
+        <p>Usted tiene ciertos derechos de protección de datos. TripAvisor tiene como objetivo tomar medidas razonables
+            para permitirle corregir, enmendar, eliminar o limitar el uso de sus Datos Personales.</p>
         <ul>
-            <li><strong>El derecho a acceder, actualizar o eliminar la información que tenemos sobre usted.</strong></li>
+            <li><strong>El derecho a acceder, actualizar o eliminar la información que tenemos sobre usted.</strong>
+            </li>
             <li><strong>El derecho de rectificación.</strong></li>
             <li><strong>El derecho a oponerse.</strong></li>
             <li><strong>El derecho de restricción.</strong></li>
@@ -84,14 +105,20 @@
             <li><strong>El derecho a retirar el consentimiento.</strong></li>
         </ul>
 
-        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">5. Cambios a esta Política de Privacidad</h2>
-        <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página. Se le aconseja que revise esta Política de Privacidad periódicamente para cualquier cambio. Los cambios a esta Política de Privacidad son efectivos cuando se publican en esta página.</p>
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">5. Cambios a esta Política de Privacidad
+        </h2>
+        <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio
+            publicando la nueva Política de Privacidad en esta página. Se le aconseja que revise esta Política de
+            Privacidad periódicamente para cualquier cambio. Los cambios a esta Política de Privacidad son efectivos
+            cuando se publican en esta página.</p>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">6. Contáctenos</h2>
-        <p>Si tiene alguna pregunta sobre esta Política de Privacidad, por favor contáctenos a través del formulario en nuestra sección de <a href="ayuda.html" style="color: var(--primary);">Ayuda</a>.</p>
+        <p>Si tiene alguna pregunta sobre esta Política de Privacidad, por favor contáctenos a través del formulario en
+            nuestra sección de <a href="ayuda.html" style="color: var(--primary);">Ayuda</a>.</p>
     </main>
     <footer style="background: var(--text); color: var(--white); padding: 50px 0; text-align: center;">
         <p style="opacity: 0.6; font-size: 14px;">© 2025 TripAvisor. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>

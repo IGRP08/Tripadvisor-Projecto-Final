@@ -1,57 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centro de Ayuda - TripAvisor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        :root {
-            --primary: #2563eb; --primary-dark: #1d4ed8; --secondary: #f1f5f9; --accent: #0ea5e9;
-            --text: #1e293b; --text-light: #64748b; --white: #ffffff; --gray-100: #f8fafc;
-            --gray-200: #e2e8f0; --gray-300: #cbd5e1; --success: #10b981; --warning: #f59e0b; --error: #ef4444;
-        }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text); background: var(--gray-100); }
-        header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); position: sticky; top: 0; width: 100%; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-size: 28px; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--primary); }
-        .main-content { max-width: 1000px; margin: 50px auto; padding: 40px; background: var(--white); border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-        .main-content h1 { font-size: 2.5rem; margin-bottom: 20px; color: var(--primary); }
-        .main-content p { margin-bottom: 15px; line-height: 1.8; }
-        footer { background: var(--text); color: var(--white); padding: 50px 0; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
     <header>
         <nav class="nav-container">
-            <a href="Tripadvisor.html" class="logo"><i class="fas fa-compass"></i> TripAvisor</a>
+            <a href="#" class="logo"><i class="fas fa-compass"></i> TripAvisor</a>
             <ul class="nav-links">
-                <li><a href="Tripadvisor.html#inicio">Inicio</a></li>
-                <li><a href="Tripadvisor.html#services">Servicios</a></li>
-                <li><a href="Tripadvisor.html#destinations">Destinos</a></li>
-                <li><a href="Tripadvisor.html#contacto-section">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#services">Servicios</a></li>
+                <li><a href="index.html#destinations">Destinos</a></li>
+                <li><a href="index.html#contacto-section">Contacto</a></li>
             </ul>
-            <div class="cart-icon" onclick="window.location.href='carrito.html'">
-                <i class="fas fa-shopping-cart"></i>
+            <div class="header-right-panel" style="display: flex; align-items: center; gap: 20px;">
+                <select id="language-switcher" class="language-switcher"
+                    style="border: 1px solid var(--gray-300); border-radius: 8px; padding: 5px; font-family: inherit;">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <div id="auth-links" class="auth-links" style="display: flex; align-items: center; gap: 10px;">
+                    <a href="carrito.html" class="login-btn"
+                        style="text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s; color: var(--primary);">Iniciar
+                        Sesión</a>
+                    <a href="carrito.html" class="register-btn"
+                        style="text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s; background-color: var(--primary); color: var(--white);">Registrarse</a>
+                </div>
+                <div id="user-info" style="display: none; align-items: center; gap: 10px;">
+                    <span id="user-greeting" style="font-weight: 500;"></span>
+                    <a href="#" id="logout-btn"
+                        style="color: var(--error); text-decoration: none; font-weight: 500;">Salir</a>
+                </div>
+
+                <div class="mobile-menu"><span></span><span></span><span></span></div>
             </div>
         </nav>
     </header>
     <main class="main-content">
         <h1>Centro de Ayuda</h1>
-        <p>Bienvenido al Centro de Ayuda de TripAvisor. Aquí encontrarás respuestas a las preguntas más comunes. Si no encuentras lo que buscas, no dudes en contactarnos.</p>
+        <p>Bienvenido al Centro de Ayuda de TripAvisor. Aquí encontrarás respuestas a las preguntas más comunes. Si no
+            encuentras lo que buscas, no dudes en contactarnos.</p>
 
         <style>
-            .faq-item { margin-bottom: 20px; border-bottom: 1px solid var(--gray-200); padding-bottom: 20px; }
-            .faq-question { font-weight: 600; font-size: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-            .faq-answer { margin-top: 15px; display: none; }
-            .faq-item.active .faq-answer { display: block; }
-            .faq-item.active .faq-question i { transform: rotate(180deg); }
+            .faq-item {
+                margin-bottom: 20px;
+                border-bottom: 1px solid var(--gray-200);
+                padding-bottom: 20px;
+            }
+
+            .faq-question {
+                font-weight: 600;
+                font-size: 1.2rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .faq-answer {
+                margin-top: 15px;
+                display: none;
+            }
+
+            .faq-item.active .faq-answer {
+                display: block;
+            }
+
+            .faq-item.active .faq-question i {
+                transform: rotate(180deg);
+            }
         </style>
 
         <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 20px;">Preguntas Frecuentes (FAQ)</h2>
@@ -60,41 +88,55 @@
             <div class="faq-item">
                 <div class="faq-question">¿Cómo creo una cuenta? <i class="fas fa-chevron-down"></i></div>
                 <div class="faq-answer">
-                    <p>Puedes crear una cuenta haciendo clic en el enlace "Carrito" en el menú de navegación, y luego seleccionando "Regístrate". Solo necesitas proporcionar tu nombre, una dirección de correo electrónico válida y una contraseña. ¡Es gratis y solo toma un minuto!</p>
+                    <p>Puedes crear una cuenta haciendo clic en el enlace "Carrito" en el menú de navegación, y luego
+                        seleccionando "Regístrate". Solo necesitas proporcionar tu nombre, una dirección de correo
+                        electrónico válida y una contraseña. ¡Es gratis y solo toma un minuto!</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">¿Cómo puedo reservar un producto o servicio? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-question">¿Cómo puedo reservar un producto o servicio? <i
+                        class="fas fa-chevron-down"></i></div>
                 <div class="faq-answer">
-                    <p>Una vez que hayas iniciado sesión, serás dirigido a nuestra página de productos. Simplemente busca el producto o servicio que te interese y haz clic en el botón "Agregar al carrito". Desde allí, puedes ver tu carrito y proceder al pago.</p>
+                    <p>Una vez que hayas iniciado sesión, serás dirigido a nuestra página de productos. Simplemente
+                        busca el producto o servicio que te interese y haz clic en el botón "Agregar al carrito". Desde
+                        allí, puedes ver tu carrito y proceder al pago.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">¿Qué métodos de pago aceptan? <i class="fas fa-chevron-down"></i></div>
                 <div class="faq-answer">
-                    <p>Actualmente, nuestro proceso de pago es simulado. Sin embargo, en una implementación real, aceptaríamos las principales tarjetas de crédito (Visa, MasterCard, American Express), PayPal y otras formas de pago electrónico seguro.</p>
+                    <p>Actualmente, nuestro proceso de pago es simulado. Sin embargo, en una implementación real,
+                        aceptaríamos las principales tarjetas de crédito (Visa, MasterCard, American Express), PayPal y
+                        otras formas de pago electrónico seguro.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">¿Puedo modificar o cancelar una compra? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-question">¿Puedo modificar o cancelar una compra? <i class="fas fa-chevron-down"></i>
+                </div>
                 <div class="faq-answer">
-                    <p>En la página del carrito, puedes modificar la cantidad de cada artículo o eliminarlo por completo antes de proceder al pago. Una vez que se ha completado el pago, la compra es final en nuestro sistema simulado. Para cancelaciones en un sistema real, tendrías que contactar a soporte al cliente.</p>
+                    <p>En la página del carrito, puedes modificar la cantidad de cada artículo o eliminarlo por completo
+                        antes de proceder al pago. Una vez que se ha completado el pago, la compra es final en nuestro
+                        sistema simulado. Para cancelaciones en un sistema real, tendrías que contactar a soporte al
+                        cliente.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">¿Mis datos personales están seguros? <i class="fas fa-chevron-down"></i></div>
                 <div class="faq-answer">
-                    <p>¡Absolutamente! Nos tomamos la seguridad y la privacidad muy en serio. Toda la información de tu cuenta está protegida. Para más detalles, por favor consulta nuestra <a href="privacidad.html" style="color: var(--primary);">Política de Privacidad</a>.</p>
+                    <p>¡Absolutamente! Nos tomamos la seguridad y la privacidad muy en serio. Toda la información de tu
+                        cuenta está protegida. Para más detalles, por favor consulta nuestra <a href="privacidad.html"
+                            style="color: var(--primary);">Política de Privacidad</a>.</p>
                 </div>
             </div>
         </div>
 
         <h2 style="font-size: 1.8rem; margin-top: 40px; margin-bottom: 20px;">¿Aún necesitas ayuda?</h2>
-        <p>Si tu pregunta no ha sido respondida, nuestro equipo de soporte está listo para ayudarte. Por favor, envíanos un correo a <strong>soporte@tripavisor.example.com</strong> y te responderemos lo antes posible.</p>
+        <p>Si tu pregunta no ha sido respondida, nuestro equipo de soporte está listo para ayudarte. Por favor, envíanos
+            un correo a <strong>soporte@tripavisor.example.com</strong> y te responderemos lo antes posible.</p>
 
     </main>
 
@@ -114,4 +156,5 @@
         <p style="opacity: 0.6; font-size: 14px;">© 2025 TripAvisor. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
