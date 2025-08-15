@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nosotros - TripAvisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #2563eb; --primary-dark: #1d4ed8; --secondary: #f1f5f9; --accent: #0ea5e9;
+            --text: #1e293b; --text-light: #64748b; --white: #ffffff; --gray-100: #f8fafc;
+            --gray-200: #e2e8f0; --gray-300: #cbd5e1; --success: #10b981; --warning: #f59e0b; --error: #ef4444;
+        }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text); background: var(--gray-100); }
+        header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); position: sticky; top: 0; width: 100%; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-size: 28px; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--primary); }
+        .main-content { max-width: 1000px; margin: 50px auto; padding: 40px; background: var(--white); border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .main-content h1 { font-size: 2.5rem; margin-bottom: 20px; color: var(--primary); }
+        .main-content p { margin-bottom: 15px; line-height: 1.8; }
+        footer { background: var(--text); color: var(--white); padding: 50px 0; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="Tripadvisor.html" class="logo"><i class="fas fa-compass"></i> TripAvisor</a>
+            <ul class="nav-links">
+                <li><a href="Tripadvisor.html#inicio">Inicio</a></li>
+                <li><a href="Tripadvisor.html#services">Servicios</a></li>
+                <li><a href="Tripadvisor.html#destinations">Destinos</a></li>
+                <li><a href="Tripadvisor.html#contacto-section">Contacto</a></li>
+            </ul>
+            <div class="cart-icon" onclick="window.location.href='carrito.html'">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>Sobre Nosotros</h1>
+        <p>En TripAvisor, creemos que viajar es más que solo visitar un nuevo lugar; es experimentar nuevas culturas, crear recuerdos inolvidables y ampliar nuestros horizontes. Nacimos de la pasión por la aventura y el deseo de hacer que la planificación de viajes sea más simple, intuitiva y accesible para todos.</p>
+
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">Nuestra Misión</h2>
+        <p>Nuestra misión es empoderar a los viajeros con las mejores herramientas y la información más completa para que puedan planificar y reservar su viaje perfecto con total confianza. Queremos eliminar la complejidad de la planificación de viajes, ofreciendo una plataforma todo en uno que sea potente y fácil de usar.</p>
+
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">Nuestra Historia</h2>
+        <p>TripAvisor fue fundada en 2024 por un grupo de amigos, viajeros y entusiastas de la tecnología que estaban frustrados con la necesidad de visitar docenas de sitios web para planificar un solo viaje. Se propusieron crear una solución única: una plataforma inteligente que no solo ofreciera los mejores precios, sino que también proporcionara una experiencia de usuario excepcional. Lo que comenzó como un pequeño proyecto apasionado, ha crecido hasta convertirse en una plataforma de confianza para viajeros de todo el mundo.</p>
+
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">Nuestros Valores</h2>
+        <ul>
+            <li><strong>Pasión por el Cliente:</strong> Nuestros clientes son el corazón de todo lo que hacemos. Nos esforzamos por superar sus expectativas en cada paso del camino.</li>
+            <li><strong>Innovación Constante:</strong> La tecnología es nuestra aliada. Estamos constantemente innovando para hacer que la planificación de viajes sea más inteligente y eficiente.</li>
+            <li><strong>Transparencia Total:</strong> Creemos en la honestidad. Los precios que ves son los que pagas, sin sorpresas ni tarifas ocultas.</li>
+            <li><strong>Confianza y Seguridad:</strong> La seguridad de tus datos y reservas es nuestra máxima prioridad. Puedes reservar con total tranquilidad.</li>
+        </ul>
+
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">¿Por Qué Elegirnos?</h2>
+        <p>Elegir TripAvisor significa elegir una experiencia sin estrés. Te ofrecemos una interfaz limpia, un motor de búsqueda potente, precios competitivos y un equipo de soporte dedicado y listo para ayudarte 24/7. Tu próxima gran aventura comienza aquí.</p>
+    </main>
+    <footer style="background: var(--text); color: var(--white); padding: 50px 0; text-align: center;">
+        <p style="opacity: 0.6; font-size: 14px;">© 2025 TripAvisor. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
